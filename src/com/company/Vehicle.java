@@ -8,8 +8,8 @@ package com.company;
 // As mentioned above, changing gears, increasing/decreasing speed should be included.
 // For you specific type of vehicle you will want to add something specific for that type of car.
 public class Vehicle {
-    String vehicleName;
-    int speed;
+    private String vehicleName;
+    private int speed;
 
     public Vehicle(String vehicleName, int speed) {
         this.vehicleName = vehicleName;
@@ -18,7 +18,7 @@ public class Vehicle {
 
     public void accelerate(int increase) {
         this.speed += increase;
-        System.out.println(this.speed + " is your new speed");
+        System.out.println(this.getVehicleName() + " has increased speed to " + this.speed);
     }
 
     public void decelerate (int decrease) {
@@ -28,6 +28,18 @@ public class Vehicle {
         } else {
             this.speed -= decrease;
         }
-        System.out.println(this.speed + " is your new speed");
+        System.out.println(this.getVehicleName() + " has decreased speed to " + this.speed);
+    }
+
+    public String getVehicleName() {
+        return vehicleName;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setVehicleName(String vehicleName) {
+        this.vehicleName = vehicleName;
     }
 }

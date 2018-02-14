@@ -6,11 +6,40 @@ package com.company;
 // You will want to decide where to put the appropriate state and behaviours (fields and methods).
 // As mentioned above, changing gears, increasing/decreasing speed should be included.
 // For you specific type of vehicle you will want to add something specific for that type of car.
+
+
+
+// combine shifting and increasing and decreasing speed functions in car
+
+// or maybe make a subclass that is automatic vrs manual 
+
+
+
 public class Main {
 
     public static void main(String[] args) {
         Vehicle test = new Vehicle("Test", 0);
         test.accelerate(45);
         test.decelerate(50);
+
+        Car rav4 = new Car("rav 4");
+        rav4.accelerate(30);
+        rav4.upShift();
+        rav4.accelerate(30);
+        rav4.upShift();
+
+        rav4.decelerate(10);
+        rav4.downShift();
+        rav4.decelerate(10);
+        rav4.downShift();
+        rav4.decelerate(10);
+        rav4.downShift();
+        rav4.decelerate(10);
+        rav4.downShift();
+        rav4.decelerate(10);
+        rav4.downShift();
+        rav4.decelerate(10);
+        rav4.downShift();
+
     }
 }
