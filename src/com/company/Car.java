@@ -15,7 +15,7 @@ public class Car extends Vehicle {
         this.setVehicleName(this.make);
     }
 
-    public void upShift() {
+    private void upShift() {
         int gearCheck = this.gear;
 
         if(this.getSpeed() >= 10 && this.getSpeed() <= 29) {
@@ -34,7 +34,7 @@ public class Car extends Vehicle {
         }
     }
 
-    public void downShift() {
+    private void downShift() {
         int gearCheck = this.gear;
 
 
@@ -54,5 +54,17 @@ public class Car extends Vehicle {
             System.out.println(this.make + " is in "+ this.gear);
 
         }
+    }
+
+    @Override
+    public void accelerate(int increase) {
+        super.accelerate(increase);
+        this.upShift();
+    }
+
+    @Override
+    public void decelerate (int decrease) {
+        super.decelerate(decrease);
+        this.downShift();
     }
 }

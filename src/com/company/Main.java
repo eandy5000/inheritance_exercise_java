@@ -8,13 +8,6 @@ package com.company;
 // For you specific type of vehicle you will want to add something specific for that type of car.
 
 
-
-// combine shifting and increasing and decreasing speed functions in car
-
-// or maybe make a subclass that is automatic vrs manual 
-
-
-
 public class Main {
 
     public static void main(String[] args) {
@@ -24,22 +17,14 @@ public class Main {
 
         Car rav4 = new Car("rav 4");
         rav4.accelerate(30);
-        rav4.upShift();
         rav4.accelerate(30);
-        rav4.upShift();
 
         rav4.decelerate(10);
-        rav4.downShift();
         rav4.decelerate(10);
-        rav4.downShift();
         rav4.decelerate(10);
-        rav4.downShift();
         rav4.decelerate(10);
-        rav4.downShift();
         rav4.decelerate(10);
-        rav4.downShift();
         rav4.decelerate(10);
-        rav4.downShift();
 
     }
 }
